@@ -7,3 +7,6 @@ node_name                "ahmed"
 client_key               "#{current_dir}/ahmed.pem"
 chef_server_url          "https://chef-server/organizations/rayaorg"
 cookbook_path            ["#{current_dir}/../cookbooks"]
+knife[:vcloud_username] = "administrator"
+knife[:vcloud_password] = "R@ya1000"
+knife[:vcloud_host] = "https://172.16.15.18"
