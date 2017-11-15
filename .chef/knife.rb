@@ -7,6 +7,10 @@ node_name                "ahmed"
 client_key               "#{current_dir}/ahmed.pem"
 chef_server_url          "https://chef-server/organizations/rayaorg"
 cookbook_path            ["#{current_dir}/../cookbooks"]
-knife[:vcloud_username] = "administrator"
-knife[:vcloud_password] = "R@ya1000"
-knife[:vcloud_host] = "https://172.16.15.18"
+knife[:vsphere_host] = "vcenter.devops"
+knife[:vsphere_user] = "administrator@vsphere.local" # Domain logins may need to be "user@domain.com"
+knife[:vsphere_pass] = "R@ya1000"       # or %Q(mypasswordwithfunnycharacters)
+knife[:vsphere_dc] = "Datacenter"
+knife[:vsphere_insecure] = true
+ssl_verify_mode    :verify_none
+
